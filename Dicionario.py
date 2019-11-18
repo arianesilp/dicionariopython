@@ -11,10 +11,10 @@ while True:
     if escolha == 2:
         while True:
             produto.clear()
-            produto['codigo'] = int(input('Código do produto: '))
-            produto['nome'] = str(input('Nome: '))
-            produto['cor'] = str(input('Cor: '))
-            produto['tamanho'] = int(input('Tamanho: '))
+            produto['codigo:'] = int(input('Código do produto: '))
+            produto['nome:'] = str(input('Nome: '))
+            produto['cor:'] = str(input('Cor: '))
+            produto['tamanho:'] = int(input('Tamanho: '))
             estoque.append(produto.copy())
             while True:
                 resp = str(input('Deseja continuar ? S/N ')).upper()[0]
@@ -24,7 +24,9 @@ while True:
             if resp == 'N':
                 break
     elif escolha == 1:
-        print(estoque)
+        for x in estoque:
+            print(x)
+        print()
     elif escolha == 3:
         print('Programa encerrado')
         break
